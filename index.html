@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perssonal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/575113077c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -42,25 +43,25 @@
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </P>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="Skills">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                             <li><span>Web Devolopment</span><br>Web app Devolopment</li>
                             <li><span>App Development</span><br>Building Androind/IOS apps</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="Experience">
                         <ul>
                             <li><span>2022-Current</span><br>Data-Engineer, MDS Communications</li>
                             <li><span>2021 - 2022</span><br>Comercial Superintendent, California Pools & Landscape</li>
                             <li><span>2018 - 2021</span><br>Lead Inspector, Johnson Controls Inc.</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="Education">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                             <li><span>Web Devolopment</span><br>Web app Devolopment</li>
@@ -71,6 +72,53 @@
             </div>
         </div>
     </div>
+<!-- ----------------services-------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>alkjsdf laksdj foaisdjfoa ijsoiajlke oiajwoeij faosi djfaoijw
+                    lkdjflkjasdfoi o adsjfoksj fdoia ;oidfjoaisdj.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Data Engineering</h2>
+                <p>alkjsdf laksdj foaisdjfoa ijsoiajlke oiajwoeij faosi djfao
+                    lkdjflkjasdfoi o adsjfoksj fdoia ;oidfjoaisdj.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Application Development</h2>
+                <p>alkjsdf laksdj foaisdjfoa ijsoiajlke oiajwoeij faosi 
+                    lkdjflkjasdfoi o adsjfoksj fdoia ;oidfjoaisdj.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <Script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     
+    
+    }
+   </Script> 
 </body>
 </html>
