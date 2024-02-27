@@ -218,12 +218,12 @@ nav ul li a:hover::after{
     background: #fff;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 100%;
     text-align: center;
-    
 }
 .work:hover img{
     transform:  scale(1.1);
+
 }
 .work:hover .layer{
     height: 100%;
@@ -237,5 +237,22 @@ nav ul li a:hover::after{
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
+
+    transition: background 0.5s;
 }
-.btn:hover
+.btn:hover{
+    background: #ff004f;
+}
+
+/* ----------------contact----------------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+
+
